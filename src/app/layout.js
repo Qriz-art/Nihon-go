@@ -5,7 +5,7 @@ import Providers from "@/components/Providers";
 // dari alamat ini, jadi WAJIB diisi domain aslinya saat sudah deploy.
 // Set lewat environment variable NEXT_PUBLIC_SITE_URL (contoh: https://nihon-go.com).
 const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://nihon-go.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://nihon-go-pearl.vercel.app"
 ).replace(/\/+$/, "");
 
 // Gambar yang dipakai saat tautan dibagikan ke WhatsApp, Facebook, X, Telegram, dll.

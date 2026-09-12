@@ -76,6 +76,6 @@ Semua angka dihitung dari `src/data/`, jadi UI ikut berubah saat data ditambah.
   `og:image` dan `twitter:image`. Agar gambarnya benar-benar muncul saat tautan di-share ke WhatsApp,
   Facebook, atau X, alamat situs harus bisa diakses publik: set `NEXT_PUBLIC_SITE_URL`
   (contoh `https://nihon-go.com`) saat deploy. Kalau tidak diisi, nilai bawaannya
-  `https://nihon-go.vercel.app`, sehingga gambar akan gagal dimuat bila domain berbeda.
+  `https://nihon-go-pearl.vercel.app`, sehingga gambar akan gagal dimuat bila domain berbeda.
   Setelah mengubah gambar, bersihkan cache crawler (Facebook Sharing Debugger atau
   `?v=2` di URL) karena banyak platform menyimpan pratinjau lama.
