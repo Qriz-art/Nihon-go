@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Palet: ivory hangat, merah Jepang, navy gelap, biru lembut */
+  --color-background: #faf7f1;
+  --color-foreground: #1b2340;
+  --color-card: #ffffff;
+  --color-surface: #f4efe6;
+  --color-border: #e7dfd2;
+  --color-muted: #7d8698;
+
+  --color-primary: #c8384a;
+  --color-primary-dark: #a72938;
+  --color-primary-light: #f6dfe2;
+
+  --color-navy: #1e2a4a;
+  --color-navy-light: #2f3f66;
+
+  --color-blue: #4a73b8;
+  --color-blue-light: #e6edf9;
+
+  --color-accent: #c99a2e;
+  --color-accent-light: #fbf1da;
+
+  --color-success: #2f8f63;
+  --color-success-light: #e2f3ea;
+
+  --color-danger: #cf3f3f;
+  --color-danger-light: #fbe6e6;
+
+  --color-jp: #1b2340;
+
+  --font-sans: "Inter", "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    "Meiryo", "Noto Sans JP", system-ui, -apple-system, sans-serif;
+  --font-jp: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo",
+    "Noto Sans JP", "MS Gothic", sans-serif;
+
+  --radius-card: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.jp {
+  font-family: var(--font-jp);
+  letter-spacing: 0.02em;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4efe6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9cfbe;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c3b6a0;
+}
+
+/* ===== Animasi ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes shakeX {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out both;
+}
+.animate-slide-up {
+  animation: slideUp 0.45s ease-out both;
+}
+.animate-pop {
+  animation: popIn 0.28s ease-out both;
+}
+.animate-shake {
+  animation: shakeX 0.3s ease-in-out;
+}
+.animate-float {
+  animation: floatSoft 4s ease-in-out infinite;
+}
+.progress-animated {
+  animation: progressFill 0.8s ease-out;
+}
+
+.delay-1 {
+  animation-delay: 0.06s;
+}
+.delay-2 {
+  animation-delay: 0.12s;
+}
+.delay-3 {
+  animation-delay: 0.18s;
+}
+.delay-4 {
+  animation-delay: 0.24s;
+}
+
+/* ===== Komponen dasar ===== */
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -18px rgba(27, 35, 64, 0.35);
+  border-color: #dccfba;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+  box-shadow: 0 10px 22px -12px rgba(200, 56, 74, 0.8);
+}
+.btn-navy {
+  background: var(--color-navy);
+  color: #fff;
+}
+.btn-navy:hover:not(:disabled) {
+  background: var(--color-navy-light);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--color-navy);
+  border: 1px solid var(--color-border);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: var(--color-surface);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+/* Pola dekoratif bertema Jepang (asano / gelombang sederhana) */
+.pattern-seigaiha {
+  background-image: radial-gradient(
+      circle at 50% 100%,
+      transparent 34%,
+      rgba(200, 56, 74, 0.09) 35%,
+      rgba(200, 56, 74, 0.09) 37%,
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      transparent 34%,
+      rgba(30, 42, 74, 0.07) 35%,
+      rgba(30, 42, 74, 0.07) 37%,
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      transparent 34%,
+      rgba(30, 42, 74, 0.07) 35%,
+      rgba(30, 42, 74, 0.07) 37%,
+      transparent 38%
+    );
+  background-size: 44px 22px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

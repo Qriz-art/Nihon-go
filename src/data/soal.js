@@ -1,0 +1,46 @@
+// Bank soal tata bahasa & soal campuran
+// Bentuk: { soal, opsi, jawaban (index), penjelasan, level, topik }
+
+export const SOAL_GRAMMAR = [
+  { soal: "私は学生___。", opsi: ["です", "ます", "ません", "でした"], jawaban: 0, penjelasan: "Kata benda diikuti です untuk menyatakan 'adalah'.", level: 1, topik: "です" },
+  { soal: "毎日日本語___勉強します。", opsi: ["を", "に", "で", "が"], jawaban: 0, penjelasan: "を menandai objek langsung dari kata kerja 勉強します.", level: 2, topik: "を" },
+  { soal: "図書館___勉強します。", opsi: ["で", "に", "を", "へ"], jawaban: 0, penjelasan: "で menandai tempat berlangsungnya tindakan.", level: 2, topik: "に・で" },
+  { soal: "七時___起きます。", opsi: ["に", "で", "を", "も"], jawaban: 0, penjelasan: "に menandai titik waktu tertentu.", level: 2, topik: "に・で" },
+  { soal: "これは私___本です。", opsi: ["の", "は", "が", "と"], jawaban: 0, penjelasan: "の menyatakan kepemilikan: buku milik saya.", level: 1, topik: "の" },
+  { soal: "私___学生です。（'saya juga'）", opsi: ["も", "は", "が", "の"], jawaban: 0, penjelasan: "も berarti 'juga' dan menggantikan は.", level: 1, topik: "も" },
+  { soal: "お酒を___。", opsi: ["飲みません", "飲みました", "飲みます", "飲みたい"], jawaban: 0, penjelasan: "ません adalah bentuk negatif sopan dari ます.", level: 1, topik: "ません" },
+  { soal: "昨日映画を___。", opsi: ["見ました", "見ます", "見ません", "見たい"], jawaban: 0, penjelasan: "ました menyatakan tindakan yang sudah selesai.", level: 1, topik: "ました" },
+  { soal: "この本は___です。（kata sifat い）", opsi: ["面白い", "面白な", "面白の", "面白だ"], jawaban: 0, penjelasan: "Kata sifat い langsung diikuti です tanpa perubahan.", level: 2, topik: "い形容詞" },
+  { soal: "静か___町です。", opsi: ["な", "い", "の", "だ"], jawaban: 0, penjelasan: "Kata sifat な memerlukan な sebelum kata benda.", level: 2, topik: "な形容詞" },
+  { soal: "今、勉強___います。", opsi: ["して", "する", "した", "します"], jawaban: 0, penjelasan: "Pola ています memakai bentuk て: 勉強しています = sedang belajar.", level: 2, topik: "て-form" },
+  { soal: "ちょっと待っ___ください。", opsi: ["て", "た", "ない", "ます"], jawaban: 0, penjelasan: "てください adalah bentuk permintaan sopan.", level: 2, topik: "てください" },
+  { soal: "日本へ___です。", opsi: ["行きたい", "行くたい", "行きますたい", "行ったたい"], jawaban: 0, penjelasan: "Pola たいです: bentuk ます tanpa ます + たいです.", level: 2, topik: "たいです" },
+  { soal: "日本語を話す___ができます。", opsi: ["こと", "もの", "の", "ところ"], jawaban: 0, penjelasan: "Pola kemampuan memakai ことができます.", level: 3, topik: "ことができます" },
+  { soal: "日本へ行った___があります。", opsi: ["こと", "もの", "とき", "ところ"], jawaban: 0, penjelasan: "Pola pengalaman memakai たことがあります.", level: 3, topik: "たことがあります" },
+  { soal: "明日は雨が降る___思います。", opsi: ["と", "を", "が", "に"], jawaban: 0, penjelasan: "と思います memakai partikel と setelah bentuk biasa.", level: 3, topik: "と思います" },
+  { soal: "雨が降っている___、家にいます。", opsi: ["ので", "のに", "でも", "からは"], jawaban: 0, penjelasan: "ので menyatakan sebab dengan nuansa sopan.", level: 3, topik: "ので" },
+  { soal: "勉強した___、話せません。", opsi: ["のに", "ので", "から", "でも"], jawaban: 0, penjelasan: "のに menyatakan pertentangan yang mengecewakan.", level: 3, topik: "のに" },
+  { soal: "安けれ___、買います。", opsi: ["ば", "なら", "たら", "と"], jawaban: 0, penjelasan: "Bentuk ば dibentuk dari kata sifat い: 安い → 安ければ.", level: 3, topik: "ば" },
+  { soal: "時間が___、映画を見ます。", opsi: ["あったら", "あれば", "あるなら", "ありたら"], jawaban: 0, penjelasan: "たら dipakai untuk pengandaian umum: 時間があったら.", level: 3, topik: "たら" },
+  { soal: "週末は本を読ん___、映画を見たりします。", opsi: ["だり", "たり", "なり", "がり"], jawaban: 1, penjelasan: "Pola たり〜たりします memakai bentuk た + り.", level: 3, topik: "たり" },
+  { soal: "誰か来た___です。（sepertinya）", opsi: ["よう", "そう", "らしい", "みたいな"], jawaban: 0, penjelasan: "ようです menyatakan dugaan berdasarkan bukti.", level: 3, topik: "ようです" },
+  { soal: "このケーキはおいし___です。（kelihatannya）", opsi: ["そう", "よう", "らしい", "の"], jawaban: 0, penjelasan: "そうです untuk kesan penglihatan: kata sifat い melepas い.", level: 3, topik: "そうです" },
+  { soal: "肉も魚___食べません。", opsi: ["も", "は", "が", "を"], jawaban: 0, penjelasan: "も〜も berarti 'baik ... maupun ...' dalam kalimat negatif.", level: 1, topik: "も" },
+  { soal: "電車___学校へ行きます。", opsi: ["で", "に", "を", "が"], jawaban: 0, penjelasan: "で menandai alat transportasi.", level: 2, topik: "に・で" },
+  { soal: "母___手紙を書きます。", opsi: ["に", "で", "を", "へは"], jawaban: 0, penjelasan: "に juga menandai penerima tindakan.", level: 2, topik: "に" },
+  { soal: "「〜なければなりません」berarti...", opsi: ["harus melakukan", "tidak boleh melakukan", "boleh melakukan", "tidak perlu melakukan"], jawaban: 0, penjelasan: "Pola ini menyatakan kewajiban: harus melakukan sesuatu.", level: 3, topik: "kewajiban" },
+  { soal: "「〜てはいけません」berarti...", opsi: ["tidak boleh melakukan", "harus melakukan", "boleh melakukan", "sedang melakukan"], jawaban: 0, penjelasan: "Pola ini menyatakan larangan.", level: 3, topik: "larangan" },
+  { soal: "「〜てもいいです」berarti...", opsi: ["boleh melakukan", "tidak boleh melakukan", "harus melakukan", "belum melakukan"], jawaban: 0, penjelasan: "Pola ini menyatakan izin.", level: 2, topik: "izin" },
+  { soal: "Kata kerja 食べる termasuk kelompok...", opsi: ["kelompok 2 (一段)", "kelompok 1 (五段)", "kelompok 3 (tidak beraturan)", "kelompok 4"], jawaban: 0, penjelasan: "食べる berakhiran -eru dan termasuk kelompok 2.", level: 2, topik: "kelompok kata kerja" },
+  { soal: "Bentuk て dari 行く adalah...", opsi: ["行って", "行いて", "行んで", "行して"], jawaban: 0, penjelasan: "Kata kerja berakhiran く berubah menjadi いて, tetapi 行く adalah pengecualian: 行って.", level: 2, topik: "て-form" },
+  { soal: "Bentuk negatif dari 来る adalah...", opsi: ["来ない", "来らない", "来しない", "来くない"], jawaban: 0, penjelasan: "来る termasuk kata kerja tidak beraturan: 来ない.", level: 3, topik: "ない-form" },
+];
+
+export const SOAL_LENGKAP_KALIMAT = [
+  { soal: "「Terima kasih banyak」 dalam bahasa Jepang adalah...", opsi: ["ありがとうございます", "いただきます", "ごちそうさま", "おかえりなさい"], jawaban: 0, penjelasan: "ありがとうございます adalah ucapan terima kasih yang sopan.", level: 1 },
+  { soal: "「Sumimasen」 mengandung arti...", opsi: ["permisi / maaf", "selamat tinggal", "selamat pagi", "sampai jumpa"], jawaban: 0, penjelasan: "すみません dipakai untuk meminta perhatian atau meminta maaf.", level: 1 },
+  { soal: "Kalimat 「私はインドネシア人です」 berarti...", opsi: ["Saya orang Indonesia", "Saya tinggal di Indonesia", "Saya pergi ke Indonesia", "Saya tidak tahu Indonesia"], jawaban: 0, penjelasan: "です menyatakan identitas.", level: 1 },
+  { soal: "「毎朝六時に起きます」berarti...", opsi: ["Setiap pagi bangun pukul enam", "Setiap pagi tidur pukul enam", "Setiap malam bangun pukul enam", "Besok pagi bangun pukul enam"], jawaban: 0, penjelasan: "毎朝 = setiap pagi, 六時に起きます = bangun pukul enam.", level: 1 },
+  { soal: "Susunan kalimat yang benar adalah...", opsi: ["私は本を読みます", "私はを本読みます", "本は私を読みます", "読みます私は本を"], jawaban: 0, penjelasan: "Struktur Jepang: topik は, objek を, lalu kata kerja.", level: 2 },
+  { soal: "Kalimat 「小さな犬がいます」 berarti...", opsi: ["Ada anjing kecil", "Saya punya dua anjing", "Anjing itu besar", "Anjing sedang tidur"], jawaban: 0, penjelasan: "います dipakai untuk makhluk hidup: 'ada'.", level: 2 },
+];
